@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardCornerRadius="12dp"
+    android:background="@android:color/white"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Header -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <!-- Left side -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:src="@drawable/robot_icon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginRight="8dp"/>
+
+                <TextView
+                    android:text="Chat with Mwanedu"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <!-- Right side -->
+            <TextView
+                android:id="@+id/btnNewChat"
+                android:text="+ New Chat"
+                android:textColor="#888888"
+                android:padding="6dp"
+                android:background="@drawable/tab_inactive_bg"
+                android:textSize="14sp"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <!-- Chat Recycler -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerChatMessages"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingVertical="8dp"/>
+
+        <!-- Quick Questions -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp">
+
+            <TextView
+                android:text="Quick questions"
+                android:textColor="#888"
+                android:textSize="12sp"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="How do I treat maize rust?"
+                        android:padding="8dp"
+                        android:background="@drawable/tab_inactive_bg"
+                        android:textColor="#444"
+                        android:layout_marginRight="8dp"
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent" />
+
+                    <TextView
+                        android:text="What's the best time to plant tomatoes?"
+                        android:padding="8dp"
+                        android:background="@drawable/tab_inactive_bg"
+                        android:textColor="#444"
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent" />
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+
+        <!-- Bottom Prompt -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <EditText
+                android:id="@+id/editPromptActive"
+                android:hint="Ask Mwanedu anything about farming..."
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:textColor="#000"
+                android:textColorHint="#888"
+                android:layout_height="match_parent" />
+
+            <ImageButton
+                android:id="@+id/btnSendActive"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/btn_circle_green"
+                android:src="@drawable/ic_arrow_forward"
+                android:contentDescription="Next"
+                android:scaleType="center"
+                app:tint="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="10dp" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

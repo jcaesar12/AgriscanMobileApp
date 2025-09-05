@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8f9fa">
+
+    <!-- Onboarding Illustration -->
+    <ImageView
+        android:id="@+id/mwanedu"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/mwanedu"
+        android:contentDescription="Mwanedu AI Assistant Illustration"
+        android:scaleType="fitCenter"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/titleText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.45"
+        android:layout_marginTop="40dp" />
+
+
+    <!-- Title Text -->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Mwanedu – Your AI Assistant"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:fontFamily="@font/inter_bold"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/mwanedu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"/>
+
+    <!-- Subtitle Text -->
+    <TextView
+        android:id="@+id/subtitleText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Ask questions and receive instant farming advice."
+        android:textSize="14sp"
+        android:textColor="@android:color/darker_gray"
+        android:fontFamily="@font/inter_regular"
+        android:gravity="center"
+        android:lineSpacingExtra="2dp"
+        app:layout_constraintTop_toBottomOf="@id/titleText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"/>
+
+    <!-- Page Indicators -->
+    <LinearLayout
+        android:id="@+id/pageIndicators"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/subtitleText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp">
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:background="@drawable/indicator_inactive"
+            android:layout_margin="4dp"/>
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:background="@drawable/indicator_active"
+            android:layout_margin="4dp"/>
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:background="@drawable/indicator_inactive"
+            android:layout_margin="4dp"/>
+    </LinearLayout>
+
+    <!-- Green Circular Next Button -->
+    <ImageButton
+        android:id="@+id/nextButton"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:background="@drawable/btn_circle_green"
+        android:src="@drawable/ic_arrow_forward"
+        android:contentDescription="Next"
+        android:scaleType="center"
+        app:tint="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/pageIndicators"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="32dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

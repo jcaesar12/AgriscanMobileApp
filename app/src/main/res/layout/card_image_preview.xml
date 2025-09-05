@@ -1,0 +1,68 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                   android:id="@+id/cardImagePreview"
+                                   android:layout_width="match_parent"
+                                   android:layout_height="wrap_content"
+                                   android:layout_marginTop="16dp"
+                                   app:cardCornerRadius="12dp"
+                                   app:cardElevation="4dp"
+                                   android:backgroundTint="#ffffff"
+                                   android:visibility="gone">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Image Preview"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:textSize="16sp" />
+
+        <ImageView
+                android:id="@+id/previewImage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="8dp" />
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Describe what you see (optional; helps improve accuracy)"
+                android:textColor="#000"
+                android:textSize="14sp"
+                android:layout_marginTop="12dp" />
+
+        <EditText
+                android:id="@+id/inputImageDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Type here..."
+                android:background="@android:drawable/edit_text"
+                android:padding="8dp"
+                android:minLines="3"
+                android:layout_marginTop="6dp" />
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Adding a description helps our AI provide more accurate results"
+                android:textSize="12sp"
+                android:textColor="#666"
+                android:layout_marginTop="4dp" />
+
+        <android.widget.Button
+                android:id="@+id/btnAnalyzeImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Analyze Image"
+                android:textColor="@android:color/white"
+                android:backgroundTint="#2b722c"
+                android:layout_marginTop="12dp"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

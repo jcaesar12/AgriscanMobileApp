@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- Bot profile -->
+    <ImageView
+        android:src="@drawable/robot_icon"
+        android:background="#f0f7f1"
+        android:padding="6dp"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:scaleType="centerInside"
+        android:layout_marginRight="8dp"/>
+
+    <!-- Bot message bubble -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="#FFFFFF"
+        android:padding="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textBotMessage"
+            android:textColor="#000"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="18sp"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent" />
+
+        <TextView
+            android:id="@+id/textBotTime"
+            android:textColor="#888"
+            android:textSize="14sp"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_marginTop="2dp"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent" />
+    </LinearLayout>
+</LinearLayout>

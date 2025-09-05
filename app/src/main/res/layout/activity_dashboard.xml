@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/dashboardScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#E9E9E9"
+            android:padding="16dp">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <!-- 1. Farm Dashboard -->
+        <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="6dp"
+                android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_dashboardbg"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Farm Dashboard"
+                    android:fontFamily="@font/poppins_bold"
+                        android:textColor="@android:color/white"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Welcome, Farmer John"
+                    android:fontFamily="@font/poppins_medium"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"
+                        android:layout_marginTop="4dp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- 2. Weather Overview -->
+        <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="#f0f0f0"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="6dp">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:background="@drawable/gradient_cardbg3"
+                    android:orientation="vertical">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                    <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/blkcld" />
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Weather Overview"
+                        android:fontFamily="@font/poppins_bold"
+                            android:layout_marginStart="8dp"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="#272624"/>
+                </LinearLayout>
+
+                <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:columnCount="2">
+
+                    <!-- Temperature -->
+                    <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:orientation="vertical"
+                            android:padding="8dp">
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Temperature"
+                            android:fontFamily="@font/poppins_medium"
+                                android:textColor="#000"/>
+                        <TextView
+                                android:id="@+id/textWeatherTemp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="24°C"
+                            android:fontFamily="@font/poppins_bold"
+                                android:textStyle="bold"
+                                android:textSize="16sp"/>
+                    </LinearLayout>
+
+                    <!-- Humidity -->
+                    <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:orientation="vertical"
+                            android:padding="8dp">
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Humidity"
+                            android:fontFamily="@font/poppins_medium"
+                                android:textColor="#000"/>
+                        <TextView
+                                android:id="@+id/textWeatherHumidity"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="65%"
+                            android:fontFamily="@font/poppins_bold"
+                                android:textStyle="bold"
+                                android:textSize="16sp"/>
+                    </LinearLayout>
+
+                    <!-- Wind -->
+                    <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:orientation="vertical"
+                            android:padding="8dp">
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Wind"
+                            android:fontFamily="@font/poppins_medium"
+                                android:textColor="#000"/>
+                        <TextView
+                                android:id="@+id/textWeatherWind"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="12 km/h"
+                            android:fontFamily="@font/poppins_bold"
+                                android:textStyle="bold"
+                                android:textSize="16sp"/>
+                    </LinearLayout>
+
+                    <!-- Condition -->
+                    <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:orientation="vertical"
+                            android:padding="8dp">
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Condition"
+                            android:fontFamily="@font/poppins_medium"
+                                android:textColor="#000"/>
+                        <TextView
+                                android:id="@+id/textWeatherCondition"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Partly Cloudy"
+                            android:fontFamily="@font/poppins_bold"
+                                android:textStyle="bold"
+                                android:textSize="16sp"/>
+                    </LinearLayout>
+                </GridLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- 3. Performance Metrics -->
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Performance Metrics"
+            android:fontFamily="@font/poppins_bold"
+                android:textSize="18sp"
+                android:textStyle="bold"
+
+                android:textColor="#000"
+                android:layout_marginBottom="8dp" />
+
+        <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="6dp"
+                android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/gradient_70"
+                    android:padding="16dp"
+                    android:gravity="center">
+
+                <!-- Activities -->
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                    <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/circle_bg"
+                            android:src="@drawable/clipboard_icon" />
+
+                    <TextView
+                            android:id="@+id/textMetricActivities"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="12"
+                        android:fontFamily="@font/poppins_bold"
+                            android:textStyle="bold"
+                            android:textColor="#FCFCFC" />
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Activities"
+                        android:fontFamily="@font/poppins_bold"
+                        android:textSize="16sp"
+                            android:textColor="#FCFCFC" />
+                </LinearLayout>
+
+                <!-- Yields -->
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                    <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/circle_bg"
+                            android:src="@drawable/fruityieldicon" />
+
+                    <TextView
+                            android:id="@+id/textMetricYields"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="240kg"
+                        android:fontFamily="@font/poppins_bold"
+                            android:textStyle="bold"
+                            android:textColor="#FCFCFC" />
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Yields"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/poppins_bold"
+                            android:textColor="#FCFCFC" />
+                </LinearLayout>
+
+                <!-- Scans -->
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                    <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/circle_bg"
+                            android:src="@drawable/search_icon" />
+
+                    <TextView
+                            android:id="@+id/textMetricScans"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="8"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/poppins_bold"
+                            android:textStyle="bold"
+                            android:textColor="#FCFCFC"/>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Scans"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/poppins_bold"
+                            android:textColor="#FCFCFC" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    <!-- Quick Actions -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Quick Actions"
+        android:fontFamily="@font/poppins_bold"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="?android:attr/dividerVertical"
+            android:dividerPadding="8dp"
+            android:orientation="vertical"
+            android:showDividers="middle">
+
+            <include
+                android:id="@+id/cardQuickScanPlant"
+                layout="@layout/card_quick_action_scan_plant"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <include
+                android:id="@+id/cardQuickAskMwanedu"
+                layout="@layout/card_quick_action_ask_mwanedu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp" />
+
+            <include
+                android:id="@+id/cardQuickAddActivity"
+                layout="@layout/card_quick_action_add_activity"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp" />
+
+            <include
+                android:id="@+id/cardQuickTrackFinances"
+                layout="@layout/card_quick_action_track_finances"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

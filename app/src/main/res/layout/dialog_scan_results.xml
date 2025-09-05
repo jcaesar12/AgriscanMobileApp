@@ -1,0 +1,110 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:padding="16dp">
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Scan Results"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#000"
+            android:gravity="center"/>
+
+    <ImageView
+            android:id="@+id/resultImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="8dp" />
+
+    <!-- Card inside dialog -->
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+            <TextView
+                    android:id="@+id/resultDiseaseName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Disease: Blight"
+                    android:textStyle="bold"
+                    android:textSize="16sp"/>
+
+            <TextView
+                    android:id="@+id/resultDiseasePercent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Confidence: 85%"
+                    android:layout_marginTop="4dp"/>
+
+            <TextView
+                    android:id="@+id/resultDiseaseDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Blight affects leaves with brown spots..."
+                    android:layout_marginTop="4dp"/>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#ccc"
+                    android:layout_marginVertical="8dp"/>
+
+            <TextView
+                    android:id="@+id/resultTreatment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Treatment: Apply fungicide regularly"
+                    android:textStyle="italic"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Buttons -->
+    <Button
+        android:id="@+id/btnAskMwanedu"
+        android:layout_width="374dp"
+        android:layout_height="191dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#000"
+        android:drawableLeft="@drawable/chat_icon"
+        android:text="Ask Mwanedu"
+        android:textColor="@android:color/white" />
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+        <Button
+                android:id="@+id/btnSaveHistory"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Save to History"
+                android:textColor="@android:color/white"
+                android:backgroundTint="#2b722c"/>
+
+        <Button
+                android:id="@+id/btnScanAgain"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Scan Again"
+                android:textColor="#000"
+                android:backgroundTint="#ffffff"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,44 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                   android:layout_width="match_parent"
+                                   android:layout_height="wrap_content"
+                                   app:cardCornerRadius="12dp"
+                                   app:cardElevation="4dp"
+                                   android:layout_marginBottom="16dp"
+                                   android:backgroundTint="#f0f7f1">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="⚠ How to use the scanner"
+            android:fontFamily="@font/poppins_bold"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="#000" />
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Photo Tips for Best Results:"
+            android:fontFamily="@font/poppins_medium"
+                android:textSize="18sp"
+
+                android:textColor="#333"
+                android:layout_marginTop="8dp" />
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="• Upload photos of leaves, stems, or fruits to check for blight\n• Take clear, well-lit photos of leaf surfaces showing spots or lesions\n• Focus on affected areas - close-up shots work better\n• Avoid blurry or poorly lit images"
+                android:textSize="12sp"
+            android:fontFamily="@font/poppins_regular"
+                android:textColor="#000"
+                android:layout_marginTop="6dp" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

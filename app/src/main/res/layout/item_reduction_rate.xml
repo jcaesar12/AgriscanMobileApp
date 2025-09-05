@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="6dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="@drawable/gradient_darkgreen_bg"
+        android:gravity="center_vertical">
+
+        <!-- Circular Icon Background -->
+        <FrameLayout
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/circle_reduction_rate_bg"
+            android:layout_marginEnd="12dp">
+
+            <ImageView
+                android:id="@+id/imgMetricIcon"
+                android:layout_width="64dp"
+                android:layout_height="78dp"
+                android:layout_gravity="center"
+                android:contentDescription="Metric Icon"
+                android:src="@drawable/carbon_reduction_icon" />
+        </FrameLayout>
+
+        <!-- Text Content -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvMetricHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reduction Rate"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:id="@+id/tvMetricValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="15% this month"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="14sp"
+                android:textColor="@android:color/white"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

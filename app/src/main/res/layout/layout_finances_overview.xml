@@ -1,0 +1,13 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <!-- Finance Cards -->
+    <include layout="@layout/card_finance_income" android:id="@+id/cardIncome"/>
+    <include layout="@layout/card_finance_expenses" android:id="@+id/cardExpenses"/>
+    <include layout="@layout/card_finance_balance" android:id="@+id/cardBalance"/>
+
+
+</LinearLayout>

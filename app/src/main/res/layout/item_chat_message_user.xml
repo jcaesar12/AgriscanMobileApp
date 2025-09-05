@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:gravity="end"
+    android:padding="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- User bubble -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="#2b722c"
+        android:padding="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textUserMessage"
+            android:textColor="#FFF"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="18sp"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent" />
+
+        <TextView
+            android:id="@+id/textUserTime"
+            android:textColor="#EEE"
+            android:textSize="14sp"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_marginTop="2dp"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent" />
+    </LinearLayout>
+
+    <!-- User profile -->
+    <ImageView
+        android:src="@drawable/profile_icon"
+        android:background="#f0f7f1"
+        android:padding="6dp"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:scaleType="centerInside"
+        android:layout_marginLeft="8dp"/>
+</LinearLayout>

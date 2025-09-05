@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="6dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Financial Entry"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:fontFamily="@font/poppins_bold"
+                android:textSize="18sp" />
+
+            <android.widget.Button
+                android:id="@+id/btnAddActivityHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+ Add Entry"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@android:color/white"
+                android:background="@drawable/btn_rounded_green"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="8dp" />
+        </LinearLayout>
+
+        <!-- Form -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp">
+
+            <!-- Type -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Type"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="#333"
+                android:layout_marginBottom="4dp" />
+
+            <Spinner
+                android:id="@+id/spinnerType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_field_bg"
+                android:prompt="@string/prompt_entry_type" />
+
+            <!-- Amount -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Amount (KES)"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="#333"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="4dp" />
+
+            <EditText
+                android:id="@+id/inputAmount"
+                style="@style/InputField"
+                android:hint="Enter amount"
+                android:inputType="number" />
+
+            <!-- Category Dropdown -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="#333"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="10dp"/>
+
+            <Spinner
+                android:id="@+id/spinnerActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_field_bg"/>
+
+            <!-- Date -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="#333"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="4dp" />
+
+            <EditText
+                android:id="@+id/inputDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_field_bg"
+                android:padding="12dp"
+                android:fontFamily="@font/poppins_medium"
+                android:focusable="false"
+                android:drawableEnd="@android:drawable/ic_menu_my_calendar"
+                android:text="2025-08-26" />
+        </LinearLayout>
+
+        <!-- Action Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_marginTop="16dp">
+
+            <android.widget.Button
+                android:id="@+id/btnCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:fontFamily="@font/poppins_medium"
+                android:background="@drawable/btn_white_border"
+                android:textColor="#333"
+                android:layout_marginEnd="8dp" />
+
+            <android.widget.Button
+                android:id="@+id/btnConfirmAddActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Confirm"
+                android:fontFamily="@font/poppins_medium"
+                android:background="@drawable/btn_rounded_light_green"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

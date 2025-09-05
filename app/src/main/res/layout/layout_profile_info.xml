@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp"
+    android:background="@android:color/white"
+    android:elevation="4dp"
+    android:layout_marginBottom="16dp"
+    android:clipToPadding="false">
+
+    <!-- Heading Row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:src="@drawable/profile_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:tint="#2b722c"/>
+
+        <TextView
+            android:text="Personal Information"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins_bold"
+            android:textSize="18sp"
+            android:layout_marginStart="8dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/> <!-- Takes all space -->
+
+        <android.widget.Button
+            android:id="@+id/btnEditProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:text="Edit"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="14sp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/btn_rounded_green"/>
+    </LinearLayout>
+
+    <!-- Form Fields -->
+    <EditText
+        android:id="@+id/inputFullName"
+        style="@style/InputField"
+        android:hint="Full Name"
+        android:fontFamily="@font/poppins_medium"
+        android:enabled="false"/>
+
+    <EditText
+        android:id="@+id/inputPhoneNumber"
+        style="@style/InputField"
+        android:hint="Phone Number"
+        android:fontFamily="@font/poppins_medium"
+        android:enabled="false"/>
+
+    <EditText
+        android:id="@+id/inputGender"
+        style="@style/InputField"
+        android:hint="Gender"
+        android:fontFamily="@font/poppins_medium"
+        android:enabled="false"/>
+
+    <EditText
+        android:id="@+id/inputCounty"
+        style="@style/InputField"
+        android:hint="County"
+        android:fontFamily="@font/poppins_medium"
+        android:enabled="false"/>
+
+    <EditText
+        android:id="@+id/inputSubCounty"
+        style="@style/InputField"
+        android:hint="Sub-County"
+        android:fontFamily="@font/poppins_medium"
+        android:enabled="false"/>
+
+    <android.widget.Button
+        android:id="@+id/btnSaveChanges"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save Changes"
+        android:visibility="gone"
+        android:fontFamily="@font/poppins_medium"
+        android:background="@drawable/btn_rounded_light_green"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="12dp"/>
+</LinearLayout>
